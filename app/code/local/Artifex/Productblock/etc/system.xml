@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <artifex translate="label" module="productblock">
+            <label>Artifex-online Extensions</label>
+            <sort_order>100</sort_order>
+			<class>artifex-custom-block</class>
+        </artifex>
+    </tabs>
+    <sections>
+        <artifex translate="label" module="productblock">
+            <label>Product Block Options</label>
+            <tab>artifex</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+ 
+            <groups>
+                <artifex_group translate="label" module="productblock">
+                    <label>AO Product Block Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <artifex_select translate="label">
+                            <label>Enable </label>
+                            <comment>Enable/Disable Extension</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </artifex_select>
+                    </fields>
+                </artifex_group>
+            </groups>
+        </artifex>
+    </sections>
+</config>

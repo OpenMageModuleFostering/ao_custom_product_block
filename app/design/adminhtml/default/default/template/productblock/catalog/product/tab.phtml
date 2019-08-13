@@ -1,0 +1,51 @@
+<?php
+$activ = Mage::getStoreConfig('artifex/artifex_group/artifex_select',Mage::app()->getStore());
+if($activ == 1)
+{
+?>
+<div class="input-field custom-blk">
+<?php 
+	$productId = Mage::registry('current_product')->getId();
+	$collection = Mage::getModel('artifex_productblock/cblock')->getCollection()->addFieldToFilter('product_id', $productId);	
+	
+	foreach($collection as $data){
+	?>
+		<div class="selected-block">
+			<label>Your selected block name is :</label><span id="artcname"><?php print_r($data->getCustom_block_name());?></span> 
+		</div>
+	<?php 
+	}
+?>
+ <div class="select-block">
+ <label for="custom_field">Select OR Chang Static Block For Product</label>
+ <?php
+	$collection = Mage::getModel('cms/block')->getCollection()->addFieldToFilter('is_active', 1);
+ ?>
+ <select id="custom_opti" name="custom_list">
+	<option value=""></option>
+	<option value="0">Remove selected Block</option>
+	<?php
+	foreach($collection as $list)
+	{
+	?>
+		<option value="<?php echo $list->getId(); ?>"><?php echo $list->getTitle(); ?></option>
+	<?php
+	}
+	?>
+ </select>
+ </div>
+</div>
+<?php
+}
+?>
+<script type="text/javascript">
+var v = $$('#artcname').first().innerHTML;
+var options = $$('select#custom_opti option');
+var len = options.length;
+for (var i = 0; i < len; i++) {
+    var xyz = options[i].text;
+	if(xyz == v){
+		options[i].selected = true;
+	}
+}
+</script>

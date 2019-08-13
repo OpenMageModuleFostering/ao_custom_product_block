@@ -1,0 +1,13 @@
+/*========================= Custom Block =========================*/
+
+
+.custom-blk{}
+.custom-blk .selected-block{ font-size:14px;  margin-bottom:40px;}
+.custom-blk .selected-block span{ font-size16px; font-weight:bold;}
+
+.custom-blk  .select-block{ font-size:14px;  padding:15px; border:1px solid #dfdfdf;}
+.custom-blk  .select-block select{ display:block; margin-top:10px; width:350px; height:28px;}
+.custom-blk  .select-block label{background: #6f8992 none repeat scroll 0 0; color: #fff; display: block; margin-bottom: 20px; margin-top: -30px; padding: 6px; width: 90%;}
+
+.artifex-custom-block dl dt { background-image:url(images/index.ico); background-position: 98% center; background-repeat: no-repeat;}
+#product_info_tabs .artifex-custom-block  span{ background-image:url(images/index.ico); background-position: 95% center; background-repeat: no-repeat;}

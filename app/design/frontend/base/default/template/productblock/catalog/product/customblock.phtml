@@ -1,0 +1,25 @@
+<?php
+$activ = Mage::getStoreConfig('artifex/artifex_group/artifex_select',Mage::app()->getStore());
+if($activ == 1)
+{
+	$currentproduct = Mage::registry('current_product');
+	// general product data
+	$product_id =  $currentproduct->getId();
+	//echo $currentproduct->getName();
+
+	$read = Mage::getSingleton('core/resource')->getConnection('core_read'); 
+	$write = Mage::getSingleton('core/resource')->getConnection('core_write');
+
+	$results = $read->fetchAll("select custom_block_id from artifex_productblock_cblock where product_id = '$product_id'");
+	$customblock = $results[0]['custom_block_id'];
+
+	if($results == null)
+	{
+			// echo "no data found";
+	}else
+	{
+		
+		echo $this->getLayout()->createBlock("cms/block")->setBlockId($customblock)->toHtml();
+	}
+}
+?>
