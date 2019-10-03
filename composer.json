@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/AO_Custom_Product_Block",
+    "name": "OpenMageModuleFostering\/AO_Custom_Product_Block",
     "type": "magento-module",
     "license": "osl",
     "homepage": "",
     "description": "Custom Product Block",
     "authors": [
-    {
-        "name": "Artifex Online",
-        "email": "info@artifex-online.com"
-    }
-],
+        {
+            "name": "Artifex Online",
+            "email": "info@artifex-online.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
